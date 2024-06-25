@@ -3,10 +3,10 @@
 Research in Data Science Project, ETH Zürich
 
 ## References
-*The preprocessing steps are forked from: https://github.com/microsoft/mimic_sepsis.
-*The environment was forked from: https://github.com/acneyouth1996/RL-for-sepsis-continuous/blob/yong_v0/
-*The TD3 implementation with LSTM encoder was forked from: https://github.com/twni2016/pomdp-baselines/blob/main/
-*The TD3 implementation with GPT-2 encoder was forked from: https://github.com/twni2016/Memory-RL
+* The preprocessing steps are forked from: https://github.com/microsoft/mimic_sepsis.
+* The environment was forked from: https://github.com/acneyouth1996/RL-for-sepsis-continuous/blob/yong_v0/
+* The TD3 implementation with LSTM encoder was forked from: https://github.com/twni2016/pomdp-baselines/blob/main/
+* The TD3 implementation with GPT-2 encoder was forked from: https://github.com/twni2016/Memory-RL
 ## Data preprocessing
 
 Before executing the following steps, you will need to get access to and setup the MIMIC-III dataset: https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iii/buildmimic/postgres
