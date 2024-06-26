@@ -9,12 +9,13 @@ Research in Data Science Project, ETH Zürich
 * The TD3 implementation with GPT-2 encoder was forked from: https://github.com/twni2016/Memory-RL
 
 ## Installation
+We use Python 3.9
+
 ```bash
 pip install -r requirements.txt
 ```
-We use python 3.9
 
-Before executing the following steps, you will need to get access to and setup the MIMIC-III dataset: https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iii/buildmimic/postgres
+Important: Before executing the following steps, you will need to get access to and setup the MIMIC-III dataset: https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iii/buildmimic/postgres
 
 ## Data preprocessing
 
