@@ -2,12 +2,6 @@
 
 Research in Data Science, ETH Zürich
 
-## References
-* The preprocessing steps are forked from: https://github.com/microsoft/mimic_sepsis.
-* The environment was forked from: https://github.com/acneyouth1996/RL-for-sepsis-continuous/blob/yong_v0/
-* The TD3 implementation with LSTM encoder was forked from: https://github.com/twni2016/pomdp-baselines/blob/main/
-* The TD3 implementation with GPT-2 encoder was forked from: https://github.com/twni2016/Memory-RL
-
 ## Installation
 We use Python 3.9
 
@@ -47,8 +41,14 @@ python3 run_model.py --model <model_type> --task <task_name> --path <path_to_mod
 * --loss (Optional):  Define bias towards hyparameters λ_1 and λ_2 in the loss, the parameters should be comma seperated without spaces (e.g. 1,1). If the loss isn't definied or "none" is passed, then the parameters are equal to 1, 1.
 * --reward (Optional): Define bias in the SOFA score, by simply passing the subsore which we would like to be biased towards (e.g. 3), remember that there are only 6 subscores. If the reward isn't definied or "none" is passed, then we use the original SOFA score.
 * --device (Optional): Choose from <cpu, mps, cuda>. The default value is cpu.
-## To replicate the results from our paper
+## Reproducing the results
 
 ```bash
 sh main.sh
 ```
+## References
+* The preprocessing steps are forked from: https://github.com/microsoft/mimic_sepsis.
+* The environment was forked from: https://github.com/acneyouth1996/RL-for-sepsis-continuous/blob/yong_v0/
+* The TD3 implementation with LSTM encoder was forked from: https://github.com/twni2016/pomdp-baselines/blob/main/
+* The TD3 implementation with GPT-2 encoder was forked from: https://github.com/twni2016/Memory-RL
+
