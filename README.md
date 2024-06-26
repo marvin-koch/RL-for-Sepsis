@@ -1,6 +1,6 @@
 # RL-for-Sepsis
 
-Research in Data Science Project, ETH Zürich
+Research in Data Science, ETH Zürich
 
 ## References
 * The preprocessing steps are forked from: https://github.com/microsoft/mimic_sepsis.
