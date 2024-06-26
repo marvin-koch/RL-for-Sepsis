@@ -30,9 +30,13 @@ This will create files train_set_tuples/val_set_tuples/test_set_tuples
 ## Running the model
 
 ```bash
-python3 run_model.py --model <model_type> --task <task_name> --path <path_to_model> --loss <loss> -reward <reward_bias>
+python3 run_model.py --model <model_type> --task <task_name> --path <path_to_model> --loss <loss_bias> -reward <reward_bias> --device <device>
 ```
-
+* --model: The model to run, can choose from <lstm, transformer>
+* --task: Choose from <train, eval, eval_multiple>
+* --path (Optional): Path to model file (.pth). For LSTM models, the file must end with the number of nodes per layer (e.g. lstm_16.pth). For Transformers, the file must end with the number of layers and heads (e.g. transformer_1_1.pth). 
+* --loss (Optional):  Define bias towards hyparameters λ_1 and λ_2 in the loss, the parameters should be comma seperated without spaces (e.g. 1,1). If the loss isn't definied or "none" is passed, then the parameters are equal to 1, 1.
+* --reward (Optional): Define bias in the SOFA score, by simply passing the subsore which we would like to be biased towards (e.g. 3), remember that there are only 6 subscores. If the reward isn't definied or "none" is passed, then we use the original SOFA score.
 ## To replicate the results from our paper
 
 ```bash
