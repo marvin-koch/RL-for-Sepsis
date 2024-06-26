@@ -18,7 +18,7 @@ First, to extract features, run:
 ```bash
 python3 preprocess.py
 ```
-Then to create the patient cohorts run:
+Then to create the patient cohort run:
 ```bash
 python3 sepsis_cohort.py
 ```
@@ -27,7 +27,7 @@ Finally, to create the training, validation and test set, run:
 ```bash
 python3 split_sepsis_cohort.py
 ```
-This will create files train_set_tuples/val_set_tuples/test_set_tuples
+This will create files train_set_tuples, val_set_tuples, test_set_tuples
 
 
 ## Running the model
