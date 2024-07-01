@@ -10,7 +10,7 @@ pip install -r requirements.txt
 ```
 
 Important: Before executing the following steps, you will need to get access to and setup the MIMIC-III dataset: https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iii/buildmimic/postgres
-
+To facilitate usage, we have included the processed data from the publicly available MIMIC-III Demo dataset.
 ## Data preprocessing
 
 
@@ -43,12 +43,12 @@ python3 run_model.py --model <model_type> --task <task_name> --path <path_to_mod
 * --reward_param (Optional): Define hyparameters γ_1 and γ_2 in the reward, the parameters should be comma seperated without spaces (e.g. 0.125,0.2). If the parameters aren't defined or "none" is passed, then the parameters are equal to 0.125, 0.2.
 * --device (Optional): Choose from <cpu, mps, cuda>. The default value is cpu.
 ## Reproducing the results
-To reproduce our results, we give the following bash script.
+To reproduce our results, we give the following bash script (Note that you have to run the preprocessing steps before):
 ```bash
 sh main.sh <model> <mode> <device>
 ```
 * model: The model to run, can choose from <lstm, transformer>
-* mode: Which confirguation we would like to reproduce, can choose from <normal, bias_loss, reward_simple, reward_both, reward_param> (Refer to the report for more explanations)
+* mode: Which configuration we would like to reproduce, can choose from <normal, bias_loss, reward_simple, reward_both, reward_param> (Refer to the report for more explanations)
 * device: Choose from <cpu, mps, cuda>.
 
 
