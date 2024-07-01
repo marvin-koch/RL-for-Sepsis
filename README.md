@@ -34,6 +34,8 @@ This will create files train_set_tuples, val_set_tuples, test_set_tuples
 
 ## Running the model
 
+Before running the model, the file paths must be defined manually in the config file (configs/common_continous.yaml).
+
 ```bash
 python3 run_model.py --model <model_type> --task <task_name> --path <path_to_model> --loss_param <loss_hyperparameters> -reward <reward_type> --reward_param <reward_hyperparameters> --device <device>
 ```
