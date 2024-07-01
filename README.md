@@ -43,7 +43,7 @@ python3 run_model.py --model <model_type> --task <task_name> --path <path_to_mod
 * --reward_param (Optional): Define hyparameters γ_1 and γ_2 in the reward, the parameters should be comma seperated without spaces (e.g. 0.125,0.2). If the parameters aren't defined or "none" is passed, then the parameters are equal to 0.125, 0.2.
 * --device (Optional): Choose from <cpu, mps, cuda>. The default value is cpu.
 ## Reproducing the results
-To reproduce our results, we give the following bash script (Note that you have to run the preprocessing steps before):
+To reproduce our results, we give the following bash script (note that you have to run the preprocessing steps before):
 ```bash
 sh main.sh <model> <mode> <device>
 ```
