@@ -44,7 +44,7 @@ python3 run_model.py --model <model_type> --task <task_name> --path <path_to_mod
 ## Reproducing the results
 
 ```bash
-sh main.sh
+sh main.sh <model> <mode> <device>
 ```
 ## References
 * The preprocessing steps are forked from: https://github.com/microsoft/mimic_sepsis.
