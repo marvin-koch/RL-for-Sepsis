@@ -11,8 +11,6 @@ pip install -r requirements.txt
 
 Important: Before executing the following steps, you will need to get access to and setup the MIMIC-III dataset: https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iii/buildmimic/postgres
 
-
-To facilitate usage, we have included the processed data from the publicly available MIMIC-III Demo dataset.
 ## Data preprocessing
 
 First, to extract features, run:
