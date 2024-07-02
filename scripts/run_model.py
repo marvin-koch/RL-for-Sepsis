@@ -17,6 +17,8 @@ November 2020 by Taylor Killian and Haoran Zhang; University of Toronto + Vector
 Notes:
  - The code for the AIS approach and general framework we build from was developed by Jayakumar Subramanian
 
+Forked from https://github.com/acneyouth1996/RL-for-sepsis-continuous/blob/yong_v0/
+
 '''
 
 import random

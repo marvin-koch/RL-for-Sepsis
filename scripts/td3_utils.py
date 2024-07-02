@@ -9,6 +9,7 @@ November 2020 by Taylor Killian and Haoran Zhang; University of Toronto + Vector
 ============================================================================================================================
 
 
+Forked from https://github.com/acneyouth1996/RL-for-sepsis-continuous/blob/yong_v0/
 The code has been modified to train and evaluate an LSTM and Transformer TD3 implementation
 
 """

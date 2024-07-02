@@ -26,6 +26,8 @@ Modified by Yong Huang 2022 at UCI
 Notes:
  - The code for the AIS approach and general framework we build from was developed by Jayakumar Subramanian
 
+Forked from https://github.com/acneyouth1996/RL-for-sepsis-continuous/blob/yong_v0/
+
 '''
 import numpy as np
 import pandas as pd
