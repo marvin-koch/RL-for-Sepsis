@@ -352,14 +352,19 @@ class ModelFreeOffPolicy_Separate_RNN(nn.Module):
             r = rew.split(",")
             mod = r[0]
             bias = r[1]
+
+            #change first term
+            s = [1,1,1,1,1,1]
             if mod == "simple" or mod == "both":
                 if int(bias) < 1 or int(bias) > 6:
                   raise Exception("Invalid subscore")
                 s = [0.8,0.8,0.8,0.8,0.8,0.8]
                 s[int(bias) - 1] = 2
-                sofa1_param,sofa2_param,sofa3_param,sofa4_param,sofa5_param,sofa6_param = s[0], s[1], s[2], s[3], s[4], s[5]
-                bias_scores = (sofa1_param*sofa1 + sofa2_param*sofa2 + sofa3_param*sofa3 + sofa4_param*sofa4 + sofa5_param*sofa5 + sofa6_param*sofa6)
 
+            sofa1_param,sofa2_param,sofa3_param,sofa4_param,sofa5_param,sofa6_param = s[0], s[1], s[2], s[3], s[4], s[5]
+            bias_scores = (sofa1_param*sofa1 + sofa2_param*sofa2 + sofa3_param*sofa3 + sofa4_param*sofa4 + sofa5_param*sofa5 + sofa6_param*sofa6)
+
+            #change second term
             s = [1,1,1,1,1,1]
             if mod == "both":
                 if int(bias) < 1 or int(bias) > 6:
