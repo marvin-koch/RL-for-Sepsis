@@ -112,6 +112,7 @@ class ReplayBuffer(object):
         self.sofa5[self.ptr] = (score[7])
         self.sofa6[self.ptr] = (score[8])
 
+        self.next_score[self.ptr] = next_score[:3]
         self.sofa1_next[self.ptr] = (next_score[3])
         self.sofa2_next[self.ptr] = (next_score[4])
         self.sofa3_next[self.ptr] = (next_score[5])
@@ -119,7 +120,7 @@ class ReplayBuffer(object):
         self.sofa5_next[self.ptr] = (next_score[7])
         self.sofa6_next[self.ptr] = (next_score[8])
 
-        self.next_score[self.ptr] = next_score[:3]
+
         self.outcome[self.ptr] = outcome
         self.not_done[self.ptr] = 1. - done
         self.ptr = (self.ptr + 1) % self.max_size

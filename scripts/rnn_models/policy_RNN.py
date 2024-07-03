@@ -325,7 +325,6 @@ class ModelFreeOffPolicy_Separate_RNN(nn.Module):
         """
         Get episode for forward pass
         """
-        #batch size = 1
         state, action_c, next_action_c, next_state, reward, scores,next_scores, outcome,  not_done = replay_buffer.sample()
 
         batch_size = replay_buffer.batch_size
@@ -336,7 +335,7 @@ class ModelFreeOffPolicy_Separate_RNN(nn.Module):
                 actions.squeeze(-1).long(), num_classes=self.action_dim
             ).float()  # (T, B, A)
 
-        g1 = -0.20
+        g1 = -0.2
         g2 = -0.125
 
         if not rew_param == "none":
@@ -374,8 +373,10 @@ class ModelFreeOffPolicy_Separate_RNN(nn.Module):
   
         inverted_done = 1.0 - not_done
 
+        # reshape data in to dimension (T+1, B, dim)
         actions, rewards, state, next_state, dones, scores, next_scores = action_c.unsqueeze(1), reward.unsqueeze(1), state.unsqueeze(1), next_state.unsqueeze(1), inverted_done.unsqueeze(1), ((scores[:,2]).reshape(-1,1).to(self.device)).unsqueeze(1), ((next_scores[:,2]).reshape(-1,1).to(self.device)).unsqueeze(1)
         next_actions = next_action_c.unsqueeze(1)
+        
         observs = torch.cat((state[[0]], next_state), dim=0)  # (T+1, B, dim)
 
         actions = torch.cat(

@@ -428,7 +428,7 @@ class ModelFreeOffPolicy_Shared_RNN(nn.Module):
             ).float()  # (T, B, A)
 
 
-        g1 = -0.20
+        g1 = -0.2
         g2 = -0.125
 
         if not rew_param == "none":
@@ -474,6 +474,7 @@ class ModelFreeOffPolicy_Shared_RNN(nn.Module):
       
         inverted_done = 1.0 - not_done.to(self.device)
 
+        # reshape data in to dimension (T+1, B, dim)
         actions, rewards, state, next_state, dones, scores, next_scores = action_c.unsqueeze(1), reward.unsqueeze(1), state.unsqueeze(1), next_state.unsqueeze(1), inverted_done.unsqueeze(1), ((scores[:,2]).reshape(-1,1).to(self.device)).unsqueeze(1), ((next_scores[:,2]).reshape(-1,1).to(self.device)).unsqueeze(1)
         next_actions = next_action_c.unsqueeze(1)
         actions = actions.to(self.device)
