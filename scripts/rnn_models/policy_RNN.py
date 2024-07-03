@@ -169,6 +169,7 @@ class ModelFreeOffPolicy_Separate_RNN(nn.Module):
     def forward(self, actions, next_actions, rewards, observs, dones, masks, scores, next_scores, loss):
         """
         Perform forward pass
+
         For actions a, rewards r, observs o, dones d: (T+1, B, dim)
                 where for each t in [0, T], take action a[t], then receive reward r[t], done d[t], and next obs o[t]
                 the hidden state h[t](, c[t]) = RNN(h[t-1](, c[t-1]), a[t], r[t], o[t])

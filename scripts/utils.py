@@ -9,7 +9,7 @@ November 2020 by Taylor Killian and Haoran Zhang; University of Toronto + Vector
 
 Forked from https://github.com/acneyouth1996/RL-for-sepsis-continuous/blob/yong_v0/
 
-Modified to such that buffer can additonaly stock SOFA subscores
+Modified such that buffer can additonnaly save SOFA subscores
 """
 
 import logging
@@ -56,8 +56,10 @@ def one_hot(x, num_x, data_type='numpy', device=None):
 
                  
 
-# Generic replay buffer for standard gym tasks (adapted from https://github.com/sfujim/BCQ/blob/master/discrete_BCQ/utils.py)
-# Modified such that me sample consecutive state,action,reward pairs (RNNs are time senstive)
+"""
+Generic replay buffer for standard gym tasks (adapted from https://github.com/sfujim/BCQ/blob/master/discrete_BCQ/utils.py)
+Modified such that me sample consecutive state,action,reward pairs (RNNs are time senstive)
+"""
 class ReplayBuffer(object):
     def __init__(self, state_dim, batch_size, buffer_size, device, encoded_state=False):
         self.batch_size = batch_size
