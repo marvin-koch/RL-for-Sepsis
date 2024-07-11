@@ -1,4 +1,4 @@
-# RL-for-Sepsis
+# Personalised Reinforcement Learning for Sepsis
 
 Research in Data Science, ETH Zürich
 
