@@ -1,4 +1,4 @@
-# Personalised Reinforcement Learning for Sepsis
+# Personalised Sepsis Treatment with Reinforcement Learning
 ## Research in Data Science, ETH Zürich
 
 ## Installation
