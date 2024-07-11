@@ -1,4 +1,5 @@
-# Personalised Reinforcement Learning for Sepsis, Research in Data Science, ETH Zürich
+# Personalised Reinforcement Learning for Sepsis
+## Research in Data Science, ETH Zürich
 
 ## Installation
 We use Python 3.9 and provide the exact environment used:
